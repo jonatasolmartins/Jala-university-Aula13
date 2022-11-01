@@ -8,6 +8,7 @@ public class WalletService
         {"CAD", 0.90M},
         {"EUR", 0.20M},
     };
+   
     public int Id { get; set; }
     public const string WalletCurrency = "BRL";
     
