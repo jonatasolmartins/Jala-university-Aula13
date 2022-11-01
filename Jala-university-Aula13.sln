@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jala-university-Aula13", "Jala-university-Aula13\Jala-university-Aula13.csproj", "{2CEDF33C-8EA5-4295-A45B-BE0D94B6372A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyExchange", "MoneyExchange\MoneyExchange.csproj", "{3ECE6440-3B52-4A24-8EB5-CE15EA6DEF63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CEDF33C-8EA5-4295-A45B-BE0D94B6372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEDF33C-8EA5-4295-A45B-BE0D94B6372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEDF33C-8EA5-4295-A45B-BE0D94B6372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEDF33C-8EA5-4295-A45B-BE0D94B6372A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECE6440-3B52-4A24-8EB5-CE15EA6DEF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECE6440-3B52-4A24-8EB5-CE15EA6DEF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECE6440-3B52-4A24-8EB5-CE15EA6DEF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECE6440-3B52-4A24-8EB5-CE15EA6DEF63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05D6DA14-8230-4F52-A5CF-9FA9BF3AE770}
+	EndGlobalSection
+EndGlobal
