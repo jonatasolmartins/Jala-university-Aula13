@@ -2,6 +2,6 @@
 {
     public interface IExchangeService
     {
-        void ExchangeMoney(IWallet wallet, Currency outgoingCurrency, Currency incomingCurrency, decimal amount);
+        void ExchangeMoney(IMasterWallet wallet, Currency outgoingCurrency, Currency incomingCurrency, decimal amount);
     }
 }

@@ -13,7 +13,7 @@ namespace MoneyExchange
             _PriceList = options.Value;
         }
 
-        public void ExchangeMoney(IWallet wallet, Currency outgoingCurrency, Currency incomingCurrency, decimal amount)
+        public void ExchangeMoney(IMasterWallet wallet, Currency outgoingCurrency, Currency incomingCurrency, decimal amount)
         {
             if (!wallet.HasCurrency(outgoingCurrency)) throw new InvalidOperationException();
 

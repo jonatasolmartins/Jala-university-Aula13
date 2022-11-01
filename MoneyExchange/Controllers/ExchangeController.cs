@@ -7,10 +7,10 @@ namespace MoneyExchange.Controllers
     public class ExchangeController : Controller
     {
         private readonly List<Currency> _MoneyOptions;
-        private readonly IWallet _Wallet;
+        private readonly IMasterWallet _Wallet;
         private readonly IExchangeService _ExchangeService;
 
-        public ExchangeController(IOptions<List<Currency>> options, IWallet wallet, IExchangeService exchangeService)
+        public ExchangeController(IOptions<List<Currency>> options, IMasterWallet wallet, IExchangeService exchangeService)
         {
             _MoneyOptions = options.Value;
             _Wallet = wallet;

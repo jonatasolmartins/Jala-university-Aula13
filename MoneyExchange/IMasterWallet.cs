@@ -1,6 +1,6 @@
 ﻿namespace MoneyExchange
 {
-    public interface IWallet
+    public interface IMasterWallet
     {
         void AddCurrency(Currency currency);
         void UpdateBalance(Currency currency, decimal amount);

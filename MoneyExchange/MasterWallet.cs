@@ -1,13 +1,13 @@
 ﻿namespace MoneyExchange
 {
-    public class Wallet : IWallet
+    public class MasterWallet : IMasterWallet
     {
         private readonly ICurrencyFactory currencyFactory;
 
         public decimal Balance { get; set; }
         public List<CurrencyWallet> Currencies { get; private set; } = new();
 
-        public Wallet(ICurrencyFactory currencyFactory)
+        public MasterWallet(ICurrencyFactory currencyFactory)
         {
             this.currencyFactory = currencyFactory;
         }

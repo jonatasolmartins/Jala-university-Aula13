@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<List<Currency>>(builder.Configuration.GetSection("Currency"));
 builder.Services.Configure<List<CurrencyPrice>>(builder.Configuration.GetSection("CurrencyPrice"));
 builder.Services.AddSingleton<ICurrencyFactory, CurrencyFactory>();
-builder.Services.AddScoped<IWallet, Wallet>();
+builder.Services.AddScoped<IMasterWallet, MasterWallet>();
 builder.Services.AddSingleton<IExchangeService, ExchangeService>();
 builder.Services.AddControllers();
 
