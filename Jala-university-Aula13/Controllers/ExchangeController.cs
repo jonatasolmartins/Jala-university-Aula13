@@ -32,4 +32,18 @@ public class ExchangeController : Controller
         return Ok();
     }
 
+    [HttpPost]
+    public IActionResult AddCurrency(string code)
+    {
+        CurrencyCode currencyCode;
+
+        if (code == "USD")
+            currencyCode = CurrencyCode.USD;
+        else
+            currencyCode = CurrencyCode.BRL;
+
+        _walletService.AddCurrency(currencyCode);
+        return Ok();
+    }
+
 }

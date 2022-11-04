@@ -22,6 +22,7 @@ namespace MoneyExchange.Controllers
         {
             var currency = _MoneyOptions[0];
             _Wallet.AddCurrency(currency);
+            //_Wallet.AddCryptoCurrency(currency);
             _Wallet.UpdateBalance(currency, 200);
             _Wallet.WithDraw(currency, 50);
             var otherCurrency = _MoneyOptions[1];

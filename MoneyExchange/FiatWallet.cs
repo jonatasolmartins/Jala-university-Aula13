@@ -1,21 +1,21 @@
 ﻿namespace MoneyExchange
 {
-    public class CurrencyWallet
+    public class FiatWallet : ICurrencyWallet
     {
         public Currency Money { get; init; }
         public decimal Price { get; private set; }
         public decimal Balance { get; private set; }
         public decimal LockedBalance { get; private set; }
 
-        public CurrencyWallet(Currency money, decimal price)
+        public FiatWallet(Currency money, decimal price)
         {
-            Money = money;
+            Money = Enum.IsDefined(typeof(FiatCode),money.Code) ? money : throw new InvalidDataException();
             Price = price;
         }
 
         public void LockBalance(decimal amount)
         {
-            if(amount <= Balance)
+            if (amount <= Balance)
             {
                 Balance -= amount;
                 LockedBalance += amount;
@@ -24,7 +24,7 @@
 
         public void UnlockBalance(decimal amount)
         {
-            if(amount <= LockedBalance)
+            if (amount <= LockedBalance)
             {
                 LockedBalance -= amount;
                 Balance += amount;

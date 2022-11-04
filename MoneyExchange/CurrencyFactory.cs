@@ -2,7 +2,7 @@
 
 namespace MoneyExchange
 {
-    public class CurrencyFactory : ICurrencyFactory
+    public  class CurrencyFactory : ICurrencyFactory
     {
         private readonly List<CurrencyPrice> _PriceList;
 
@@ -13,15 +13,23 @@ namespace MoneyExchange
         {
             _PriceList = options.Value;
         }
-        public CurrencyWallet CreateCurrency(Currency currency)
+
+        public ICurrencyWallet CreateCryptoWallet(Currency currency)
+        {
+            return new CryptoWallet(currency, 200);
+        }
+
+        public ICurrencyWallet CreateFiatWallet(Currency currency)
         {
             var currencyPrice = _PriceList.SingleOrDefault(x => x.CurrencyCode == currency.Code);
-            return new CurrencyWallet(currency, currencyPrice.Price);
+            return new FiatWallet(currency, currencyPrice.Price);
         }
+
     }
 
     public interface ICurrencyFactory 
     {
-        CurrencyWallet CreateCurrency(Currency currency);
+        ICurrencyWallet CreateFiatWallet(Currency currency);
+        ICurrencyWallet CreateCryptoWallet(Currency currency);
     }
 }

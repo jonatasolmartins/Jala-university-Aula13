@@ -5,7 +5,7 @@
         private readonly ICurrencyFactory currencyFactory;
 
         public decimal Balance { get; set; }
-        public List<CurrencyWallet> Currencies { get; private set; } = new();
+        public List<ICurrencyWallet> Currencies { get; private set; } = new();
 
         public MasterWallet(ICurrencyFactory currencyFactory)
         {
@@ -48,8 +48,14 @@
 
         public void AddCurrency(Currency currency)
         {
-            var newCurrency = currencyFactory.CreateCurrency(currency);
+            var newCurrency = currencyFactory.CreateFiatWallet(currency);
             Currencies.Add(newCurrency);
+        }
+
+        public void AddCryptoCurrency(Currency currency)
+        {
+            var newCurrency2 = currencyFactory.CreateCryptoWallet(currency);
+            Currencies.Add(newCurrency2);
         }
 
         public bool HasCurrency(Currency currency)
